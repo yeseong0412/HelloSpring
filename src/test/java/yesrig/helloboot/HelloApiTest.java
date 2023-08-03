@@ -15,7 +15,7 @@ public class HelloApiTest {
     void helloApi(){
         TestRestTemplate rest = new TestRestTemplate();
 
-        ResponseEntity<String> res = rest.getForEntity("http://localhost:8080/hello?name={name}", String.class, "Spring");
+        ResponseEntity<String> res = rest.getForEntity("http://localhost:8080/hello?name={name}", String.class, " Spring");
 
         assertThat(res.getStatusCode()).isEqualTo(HttpStatus.OK);
 
