@@ -8,17 +8,8 @@ import org.springframework.context.annotation.*;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-@Configuration
-@ComponentScan
+@MySpringBootAnnotation
 public class HellobootApplication {
-	@Bean
-	public ServletWebServerFactory servletWebServerFactory(){
-		return new TomcatServletWebServerFactory();
-	}
-	@Bean
-	public DispatcherServlet dispatcherServlet(){
-		return new DispatcherServlet();
-	}
 	public static void main(String[] args) {
 		SpringApplication.run(HellobootApplication.class, args);
 	}
